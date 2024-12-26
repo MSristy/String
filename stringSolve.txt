@@ -1,0 +1,601 @@
+                        problem01
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char ch[100];
+int i,count=0;
+
+printf("Enter the string:\n ");
+gets(ch);
+
+for (i=0;ch[i]!='\0';i++){
+   count++;
+}
+
+ printf("Total number:%d",count);
+
+ return 0;
+
+
+}
+
+
+                       problem02
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char str1[100],str2[100];
+int i,j,k;
+
+printf("Enter the first string:\n ");
+gets(str1);
+
+printf("Enter the second string:\n ");
+gets(str2);
+
+i=0;
+    while(str1[i] != '\0')
+    {
+        i++;
+    }
+
+j = 0;
+    while(str2[j] != '\0')
+    {
+        str1[i] = str2[j];
+        i++;
+        j++;
+    }
+
+str1[i]='\0';
+
+ printf("Concatenate two string: %s ",str1);
+
+
+ return 0;
+
+
+}
+
+
+                          problem 03
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char ch[100];
+int i,count=0;
+
+printf("Enter the string:\n ");
+gets(ch);
+
+for (i=0;ch[i]!='\0';i++){
+      if(ch[i]=='a' || ch[i]=='e' || ch[i]=='i' || ch[i]=='o' || ch[i]=='u' ||
+         ch[i]=='A' || ch[i]=='E' || ch[i]=='I' || ch[i]=='O' || ch[i]=='U'){
+      count++;
+      }
+}
+
+ printf("Total number:%d",count);
+
+ return 0;
+
+
+}
+
+
+                     problem04
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char ch[100];
+int i,count=1;
+
+printf("Enter the string:\n ");
+gets(ch);
+
+for (i=0;ch[i]!='\0';i++){
+      if(ch[i]==' ')
+      count++;
+}
+ printf("Total number:%d",count);
+
+
+ return 0;
+
+
+}
+
+
+
+                      problem05
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char s1[10];
+int i,length;
+
+gets(s1);
+
+length=strlen(s1);
+
+
+printf("\nReverse  string is:\n");
+for(i=length;i>=0;i--){
+   printf("%c",s1[i]);
+}
+
+ printf("\n");
+
+return 0;
+}
+
+
+
+
+
+                    problem06
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char ch[100];
+int i;
+
+printf("Enter the string:\n ");
+gets(ch);
+
+for (i=0;ch[i]!='\0';i++){
+      if(ch[i]>='a'&&ch[i]<='z'){
+         ch[i]=ch[i]-32;
+      }
+
+}
+ printf("uppercase letters are:\n%s",ch);
+
+
+ return 0;
+
+
+}
+
+
+                         problem07
+
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char ch[100];
+int i;
+
+printf("Enter the string:\n ");
+gets(ch);
+
+for (i=0;ch[i]!='\0';i++){
+      if(ch[i]>='a'&&ch[i]<='z' ){
+         ch[i]=ch[i]-32;
+      }
+      else if(ch[i]>='A'&&ch[i]<='Z'){
+         ch[i]=ch[i]+32;
+      }
+
+}
+ printf("Toggles are:\n%s",ch);
+
+
+ return 0;
+
+
+}
+
+
+
+                 problem 08
+
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char str[100],term;
+int i,j,length;
+
+printf("Enter the string:\n ");
+gets(str);
+
+length=strlen(str);
+
+
+for(i=1;i<length;i++){
+   for(j=0;j<length-i;j++){
+
+         if(str[j]>str[j+1]){
+
+            term= str[j];
+            str[j]=str[j+1];
+            str[j+1]=term;
+         }
+   }
+}
+
+
+ printf("%s",str);
+
+
+ return 0;
+
+
+}
+
+
+
+                    problem 09
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char str[100];
+int i,count=0;
+
+printf("Enter the string:\n ");
+gets(str);
+
+
+for (i=0;str[i]!='\0';i++){
+
+   if (str[i]=='e' || str[i]=='E'){
+      count++;
+   }
+}
+
+printf("total=%d",count);
+
+return 0;
+
+}
+
+
+
+
+
+                 problem 10
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+   char str1[50],str2[50];
+
+   gets(str1);
+
+   printf("The main string:%s\n",str1);
+
+
+   strcpy(str2,strrev(str1));
+
+   printf("The rev string:%s\n",str2);
+
+   if(str25==str1){
+      printf("yes");
+   }
+   else {
+      printf("no");
+   }
+
+
+}
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char s1[10];
+int i,length,flag=0;
+
+printf("Enter a string \n");
+gets(s1);
+
+length=strlen(s1);
+
+for(i=0;i<length;i++){
+
+   if (s1[i]==s1[length-i-1]){
+      flag=1;
+      break;
+   }
+}
+if(flag==1){
+   printf("sring is palindrome");
+}
+else{
+  printf("sring is not  palindrome");
+}
+return 0;
+}
+
+
+
+                      problem 11
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char str[100];
+int i,sum=0;
+
+printf("Enter the string:\n ");
+gets(str);
+
+
+for (i=0;str[i]!='\0';i++){
+
+   if (str[i]>='0' && str[i]<='9'){
+
+
+     sum=sum+str[i]-'0';
+
+   }
+}
+
+printf("sum of all digit=%d",sum);
+
+return 0;
+
+}
+
+
+
+                    problem 12
+
+
+#include <stdio.h>
+#include <string.h>
+
+int countOccurrences(char * str, char * toSearch);
+
+
+int countOccurrences(char  * str, char * toSearch)
+{
+    int i, j, found, count=0;
+    int stringLen, searchLen;
+
+    stringLen = strlen(str);
+    searchLen = strlen(toSearch);
+
+
+    for(i=0; i <= stringLen-searchLen; i++)
+    {
+
+        found = 1;
+        for(j=0; j<searchLen; j++)
+        {
+            if(str[i + j] != toSearch[j])
+            {
+                found = 0;
+                break;
+            }
+        }
+
+        if(found == 1)
+        {
+            count++;
+        }
+    }
+
+    return count;
+}
+
+
+
+int main()
+{
+    char str[100];
+    char toSearch[100];
+    int count;
+
+
+    printf("Enter any string: ");
+    gets(str);
+    printf("Enter word to search occurrences: ");
+    gets(toSearch);
+
+    count = countOccurrences(str, toSearch);
+
+    printf("Total occurrences of '%s': %d", toSearch, count);
+
+    return 0;
+}
+
+
+
+                        problem 13
+
+
+#include<stdio.h>
+#include<string.h>
+
+int main(){
+
+char str[100];
+int i,j,k,n;
+
+printf("Enter the string: ");
+gets(str);
+
+n=strlen(str);
+
+for (i=0;i<n;i++){
+
+   for (j=i+1;j<n;j++){
+
+    if(str[i]==str[j]){
+
+      for(k=j;k<n;k++){
+
+         str[k]=str[k+1];
+         }
+         n--;
+         j--;
+      }
+   }
+}
+
+
+printf("\n %s ",str);
+   return 0;
+}
+
+
+
+
+                            problem 14
+
+
+#include <stdio.h>
+#define MAX_SIZE 100
+#define MAX_CHARS 255
+
+
+int main()
+{
+    char str[MAX_SIZE];
+    int freq[MAX_CHARS];
+    int i = 0, max;
+    int ascii;
+
+    printf("Enter any string: ");
+    gets(str);
+
+
+    for(i=0; i<MAX_CHARS; i++)
+    {
+        freq[i] = 0;
+    }
+
+
+   for(i=0;str[i] != '\0';i++)
+    {
+        ascii = (int)str[i];
+        freq[ascii] += 1;
+
+    }
+
+
+    max = 0;
+    for(i=1; i<MAX_CHARS; i++)
+    {
+        if(freq[i] > freq[max])
+            max = i;
+    }
+
+
+    printf("Maximum occurring character is '%c' = %d times.", max, freq[max]);
+
+    return 0;
+}
+
+
+
+                       problem 15
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+#define MAX_SIZE 100 // Maximum string size
+
+int main()
+{
+    char str[100], reverse[100];
+    int len, i, index, wordStart, wordEnd;
+
+    printf("Enter any string: ");
+    gets(str);
+
+    len   = strlen(str);
+    index = 0;
+
+    // Start checking of words from the end of string
+    wordStart = len - 1;
+    wordEnd   = len - 1;
+
+    while(wordStart > 0)
+    {
+        // If a word is found
+        if(str[wordStart] == ' ')
+        {
+            // Add the word to the reverse string
+            i = wordStart + 1;
+            while(i <= wordEnd)
+            {
+                reverse[index] = str[i];
+
+                i++;
+                index++;
+            }
+            reverse[index++] = ' ';
+
+            wordEnd = wordStart - 1;
+        }
+
+        wordStart--;
+    }
+
+    // Finally add the last word
+    for(i=0; i<=wordEnd; i++)
+    { 
+        reverse[index] = str[i];
+        index++;
+    }
+
+    // Add NULL character at the end of reverse string
+    reverse[index] = '\0';
+
+    
+    printf("Reverse ordered words \n%s", reverse);
+
+    return 0;
+}
+
+
+
+sristy
+
